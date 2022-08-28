@@ -1,0 +1,51 @@
+######################################################################
+# BRANCHING WITH GITHUB
+######################################################################
+
+1. Check which branch you are on (current branch will be green)
+
+git branch -l
+
+2. Look at the changes (these changes do not belong to a branch yet)
+
+git status
+
+3. Create a new branch and switch to that branch
+
+git checkout -b <branch_name>
+
+4. Ensure you are on the desired branch (current branch will be green)
+
+git branch -l
+
+5. Add your changes to the staging area
+
+git add .
+
+6. View specific changes
+
+git status -v
+
+7. Commit changes
+
+git commit -m "<commit_message>"
+
+8. Push to the remote branch
+
+git push origin <branch_name>
+
+9. Create a pull request
+
+gh pr create -B main -f -H <branch_name>
+
+10. Display pull requests
+
+gh pr list
+
+11. Merge commits with the base branch and delete branch
+
+gh pr merge -md
+
+12. Sync local repo with remote repo
+
+git pull

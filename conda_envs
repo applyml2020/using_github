@@ -1,0 +1,110 @@
+#####################################################
+# CREATE ENVIRONMENT (Part 1)
+#####################################################
+# If starting with only base conda environment and no environment.yml file exists...
+
+# 1. Clone repo
+
+git clone <repo url>
+
+# 2. Open terminal
+
+cmd
+
+# 3. Activate conda base environment
+
+conda activate
+
+# 4. Clone base environment
+
+conda create -n <environment_name> --clone base
+
+# 5. Activate newly created environment
+
+conda activate <environment_name>
+
+#####################################################
+# CREATE ENVIRONMENT (Part 2)
+#####################################################
+# If starting with a base environment and a environment.yml file exists...
+
+# 1. Clone repo
+
+git clone <repo url>
+
+# 2. Open terminal
+
+cmd
+
+# 3. Activate conda base environment
+
+conda activate
+
+# 4. Create environment from environment.yml file
+
+conda env create -f environment.yml
+
+# 5. Activate newly created environment
+
+conda activate <environment_name>
+
+#####################################################
+# INSTALLING INTO ENVIRONMENT
+#####################################################
+# With the appropriate environment activated...
+
+# 1. Conda
+
+conda install -c conda-forge <package_name>
+
+# 2. pip (only use if conda install is not working or if package is from github)
+
+pip install <package_name>
+
+#####################################################
+# CREATE/UPDATE YAML FILE
+#####################################################
+# With the appropriate environment activated...
+
+# 1. Get dependencies
+
+conda list
+
+# 2. Get the contents of yml file to display in console
+
+conda env export
+
+# 3. Export yml file (and name it environment.yml)
+
+conda env export > environment.yml
+
+#####################################################
+# USAGE - Anaconda must be installed!
+#####################################################
+# With environment.yml inside root directory...
+
+# 1. Open terminal
+
+# 2. Activate newly created environment
+
+conda activate <environment_name>
+
+#####################################################
+# DELETE (this is extra information)
+#####################################################
+# remove environment
+conda remove -n <environment_name> --all
+
+# must also delete from default directory
+C:\Users\<user_name>\Anaconda3\envs\<environment_name>
+
+
+
+
+
+
+
+
+
+
+
